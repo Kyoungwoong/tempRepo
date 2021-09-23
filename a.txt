@@ -1,1 +1,94 @@
-hello world!
+hiro@gim-yeong-ung-ui-MacBookAir practice % git config --list
+credential.helper=osxkeychain
+user.naem=hiro
+user.email=kyy980708@gmail.com
+user.name=hiro
+core.autocrlf=input
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+core.ignorecase=true
+core.precomposeunicode=true
+hiro@gim-yeong-ung-ui-MacBookAir practice % git init
+Reinitialized existing Git repository in /Users/hiro/Desktop/practice/.git/
+hiro@gim-yeong-ung-ui-MacBookAir practice % git clone https://github.com/Kyoungwoong/tempRepo
+Cloning into 'tempRepo'...
+remote: Enumerating objects: 23, done.
+remote: Counting objects: 100% (23/23), done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 23 (delta 1), reused 23 (delta 1), pack-reused 0
+Receiving objects: 100% (23/23), done.
+Resolving deltas: 100% (1/1), done.
+hiro@gim-yeong-ung-ui-MacBookAir practice % 
+hiro@gim-yeong-ung-ui-MacBookAir practice % git add tempRepo
+warning: adding embedded git repository: tempRepo
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> tempRepo
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached tempRepo
+hint: 
+hint: See "git help submodule" for more information.
+hiro@gim-yeong-ung-ui-MacBookAir practice % git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   b.txt
+	new file:   c.txt
+	new file:   tempRepo
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   a.txt
+	modified:   c.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+
+hiro@gim-yeong-ung-ui-MacBookAir practice % git diff
+diff --git a/a.txt b/a.txt
+index a042389..3032aa4 100644
+--- a/a.txt
++++ b/a.txt
+@@ -1 +1,23 @@
+-hello world!
++hiro@gim-yeong-ung-ui-MacBookAir practice % git config --list
++credential.helper=osxkeychain
++user.naem=hiro
++user.email=kyy980708@gmail.com
++user.name=hiro
++core.autocrlf=input
++core.repositoryformatversion=0
++core.filemode=true
++core.bare=false
++core.logallrefupdates=true
++core.ignorecase=true
++core.precomposeunicode=true
++hiro@gim-yeong-ung-ui-MacBookAir practice % git init
++Reinitialized existing Git repository in /Users/hiro/Desktop/practice/.git/
++hiro@gim-yeong-ung-ui-MacBookAir practice % git clone https://github.com/Kyoungwoong/tempRepo
++Cloning into 'tempRepo'...
++remote: Enumerating objects: 23, done.
++remote: Counting objects: 100% (23/23), done.
++remote: Compressing objects: 100% (10/10), done.
++remote: Total 23 (delta 1), reused 23 (delta 1), pack-reused 0
++Receiving objects: 100% (23/23), done.
++Resolving deltas: 100% (1/1), done.
++hiro@gim-yeong-ung-ui-MacBookAir practice % 
+diff --git a/c.txt b/c.txt
+index a042389..f5be8ac 100644
+--- a/c.txt
++++ b/c.txt
+@@ -1 +1,2 @@
+ hello world!
++add
+hiro@gim-yeong-ung-ui-MacBookAir practice % 
